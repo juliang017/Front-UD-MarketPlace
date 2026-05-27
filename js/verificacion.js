@@ -16,7 +16,7 @@ inputs.forEach((input,index)=>{
     input.addEventListener(
     "input",
     ()=>{
-
+        input.value = input.value.replace(/[^0-9]/g, '');
         if(
             input.value.length === 1 &&
             index < inputs.length-1
